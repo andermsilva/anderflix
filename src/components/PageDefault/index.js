@@ -1,9 +1,9 @@
-import React from 'react'
-import Menu from '../Menu'
-import Footer from '../Footer'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
+import Menu from '../Menu';
+import Footer from '../Footer';
 
-const Main = styled.main `
+const Main = styled.main`
     background-color: var(--black);
     color var(--white);
     flex:1;
@@ -12,15 +12,15 @@ const Main = styled.main `
     padding-right:5%; 
 `;
 
-function PageDEfault({children}){
-    return(
-        <>
-          <Menu/>
-            <Main>
-              {children}  
-            </Main>
-          <Footer/>
-        </>
-    );
+function PageDEfault({ children }) {
+  return (
+    <>
+      <Menu />
+      <Main>
+        {children}
+      </Main>
+      <Footer />
+    </>
+  );
 }
-export default PageDEfault
+export default PageDEfault;

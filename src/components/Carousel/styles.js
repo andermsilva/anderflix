@@ -54,4 +54,3 @@ export const VideoCardList = styled.ul`
     margin-right: 16px;
   }
 `;
-
