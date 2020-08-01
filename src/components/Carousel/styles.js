@@ -1,5 +1,12 @@
 import styled from 'styled-components';
 
+export const VideoCardGroupContainer = styled.section`
+  color: var(--white);
+  min-height: 197px;
+  margin-left: 5%;
+  margin-bottom: 16px;
+`;
+
 export const Title = styled.h3`
   font-style: normal;
   font-weight: normal;
@@ -25,6 +32,7 @@ export const ExtraLink = styled.a`
   &:hover,
   &:focus {
     opacity: .5;
+    
   }
   @media (max-width: 800px) {
     display: block;
@@ -47,9 +55,3 @@ export const VideoCardList = styled.ul`
   }
 `;
 
-export const VideoCardGroupContainer = styled.section`
-  color: white;
-  min-height: 197px;
-  margin-left: 5%;
-  margin-bottom: 16px;
-`;

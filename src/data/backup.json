@@ -1,96 +1,75 @@
 {
   "categorias": [
     {
-      "titulo": "Respostas Sérias À Perguntas Absurdas",
-      "link": "http://facebook.com/CienciaTodoDia",
+      "titulo": "Front End",
+      "link": "https://www.alura.com.br/formacao-front-end",
       "cor": "#6BD1FF",
       "link_extra": {
-        "text": "Ciência Todo Dia",
-        "url": "http://facebook.com/CienciaTodoDia"
+        "text": "Formação de Front End na Alura",
+        "url": "https://www.alura.com.br/cursos-online-front-end"
       },
       "videos": [
         {
-          "titulo": "O Quão proxímo Júpter está de ser uma Estrela?",
-          "url": "https://www.youtube.com/watch?v=xxD1tcpzpU0&list=PLPz6TqSYQzDamft3yRMs7WvxCvgA-9Tgg"
-          
+          "titulo": "O que faz uma desenvolvedora front-end? #HipstersPontoTube",
+          "url": "https://www.youtube.com/watch?v=ZY3-MFxVdEw"
         },
         {
-          "titulo": "É possivél apagar o sol com água?",
-          "url": "https://www.youtube.com/watch?v=pI4ZY1jg_Ck&list=PLPz6TqSYQzDamft3yRMs7WvxCvgA-9Tgg&index=2"
+          "titulo": "SEO com React",
+          "url": "https://www.youtube.com/watch?v=c8mVlakBESE"
         },
         {
-          "titulo": "Overose de Chocolate",
-          "url": "https://www.youtube.com/watch?v=2JyZLw0o5u4&list=PLPz6TqSYQzDamft3yRMs7WvxCvgA-9Tgg&index=3"
+          "titulo": "Componentização com VanillaJS #AluraMais",
+          "url": "https://www.youtube.com/watch?v=LatCKpcOMak"
         },
         {
-          "titulo": "Por que o café nos deixa Acordasdos?",
-          "url": "https://www.youtube.com/watch?v=yMNasaTnBPo&list=PLPz6TqSYQzDamft3yRMs7WvxCvgA-9Tgg&index=4"
+          "titulo": "Pare de chutar e aprenda a display: inline #01",
+          "url": "https://www.youtube.com/watch?v=5PS6ku8NzIE"
         },
         {
-          "titulo": "Quanto uma nuvem pesa?",
-          "url": "https://www.youtube.com/watch?v=_yjLuQtmMk4&list=PLPz6TqSYQzDamft3yRMs7WvxCvgA-9Tgg&index=5"
+          "titulo": "Template String: Interpolando strings com JavaScript #AluraMais",
+          "url": "https://www.youtube.com/watch?v=ORI_HTXaIw0"
         },
         {
-          "titulo": "Qual o tamanho maximo que um canudinho pode ter?",
-          "url": "https://www.youtube.com/watch?v=-oYD8H2uAU0&list=PLPz6TqSYQzDamft3yRMs7WvxCvgA-9Tgg&index=6"
+          "titulo": "Qual é a melhor linguagem de programação? #HipstersPontoTube",
+          "url": "https://www.youtube.com/watch?v=Uh-GNH-t89w"
         },
         {
-          "titulo": "Por que a lua fica vermelha?",
-          "url": "https://www.youtube.com/watch?v=R7TGHE1HFjM&list=PLPz6TqSYQzDamft3yRMs7WvxCvgA-9Tgg&index=9"
+          "titulo": "Novidades do Angular v9",
+          "url": "https://www.youtube.com/watch?v=34uHo7hFmG0"
         },
         {
-          "titulo": "Você pode morrer de sono?",
-          "url": "https://www.youtube.com/watch?v=GmV3DgDp5UY&list=PLPz6TqSYQzDamft3yRMs7WvxCvgA-9Tgg&index=8"
-        },
-        {
-          "titulo": "Por que nós não temos predadores?",
-          "url": "https://www.youtube.com/watch?v=717EmpNw2nY&list=PLPz6TqSYQzDamft3yRMs7WvxCvgA-9Tgg&index=10"
-        },
-        {
-          "titulo": "Nós só utilizamos 10% do nosso cérebro?",
-          "url": "https://www.youtube.com/watch?v=J057PXmIYNg&list=PLPz6TqSYQzDamft3yRMs7WvxCvgA-9Tgg&index=11"
-        } ,
-        {
-          "titulo": "A verdade por trás do céu",
-          "url": "https://www.youtube.com/watch?v=7c2tZmD4BJQ&list=PLPz6TqSYQzDamft3yRMs7WvxCvgA-9Tgg&index=12"
-        } ,
-        {
-          "titulo": "Nós seremos extintos?",
-          "url": "https://www.youtube.com/watch?v=hV59Td41lIY&list=PLPz6TqSYQzDamft3yRMs7WvxCvgA-9Tgg&index=13"
-        }       
+          "titulo": "Base para aprender os frameworks",
+          "url": "https://www.youtube.com/watch?v=QzDjdlF1BQI"
+        }        
       ]
     },
     {
-      "titulo": "Porta dos Fundos",
+      "titulo": "Back End",
       "cor": "#00C86F",
       "link_extra": {
-        "text": "Humor",
-        "url": "https://www.youtube.com/c/PortadosFundos"
+        "text": "Cursos de Back End na Alura",
+        "url": "https://www.alura.com.br/cursos-online-programacao"
       },
       "videos": [
         {
-          "titulo": "Travou aqui",
-          "url": "https://www.youtube.com/watch?v=tCEQPzRNQ-k&list=PLT0Smhj8chMUeiPOjHmLDDaGunDOInMsL&index=1"
+          "titulo": "PERCURSO em NÍVEL em ÁRVORE BINÁRIA | Estruturas de Dados #14",
+          "url": "https://www.youtube.com/watch?v=UOK7nS2E9xM"
         },
         {
-          "titulo": "Palavra Cahve",
-          "url": "https://www.youtube.com/watch?v=YeDE9ExKtlw&list=PLT0Smhj8chMUeiPOjHmLDDaGunDOInMsL&index=2"
+          "titulo": "Coders4Tips - S01E04: GitHub CLI - Uma Nova Experiência no Github!",
+          "url": "https://www.youtube.com/watch?v=6o6-bKOZOEY"
         },
         {
-          "titulo": "O Home do Office",
-          "url": "https://www.youtube.com/watch?v=B9cjVcqIthc&list=PLT0Smhj8chMUeiPOjHmLDDaGunDOInMsL&index=3"
+          "titulo": "Programei 4 robôs que criam vídeos para mim no YouTube",
+          "url": "https://www.youtube.com/watch?v=kjhu1LEmRpY"
         },
         {
-          "titulo": "O dia de folga",
-          "url": "https://www.youtube.com/watch?v=Pyoub9tU_34&list=PLT0Smhj8chMUeiPOjHmLDDaGunDOInMsL&index=4"
+          "titulo": "API: Dicionário do Programador",
+          "url": "https://www.youtube.com/watch?v=vGuqKIRWosk"
         }, 
         {
-          "titulo": "Happy Hour",
-          "url": "https://www.youtube.com/watch?v=ns8nticU1x0&list=PLT0Smhj8chMUeiPOjHmLDDaGunDOInMsL&index=5"
-        },
-        {
-          "titulo": "Travou aqui",
-          "url": "https://www.youtube.com/watch?v=tCEQPzRNQ-k&list=PLT0Smhj8chMUeiPOjHmLDDaGunDOInMsL&index=1"
+          "titulo": "Usando Git Direito",
+          "url": "https://www.youtube.com/watch?v=6OokP-NE49k"
         }
       ]
     },
@@ -139,16 +118,7 @@
         {
           "titulo": "Feitiço do Tempo",
           "url": "https://www.youtube.com/watch?v=zi8d69P9NvI"
-        },
-        {
-          "titulo": "Prenda-me se puder",
-          "url": "https://youtu.be/5oCjG9vMw4A"
-        },
-        {
-          "titulo": "Interstelar",
-          "url": "https://youtu.be/lcUv0wu2icU"
         }
-
       ]
     },
     {

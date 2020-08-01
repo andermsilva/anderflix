@@ -4,15 +4,20 @@ import React from 'react';
  import Carousel from '../../components/Carousel'
  import Footer from '../../components/Footer'
  import dadosIniciais from '../../data/dados_iniciais.json'
+import styled from 'styled-components';
 
+const AppWrapper = styled.div`
+   background: var(--grayDark);
+`;
 function Home() {
   return (
-    <div style={{background: "#141414"}}>
+    <AppWrapper>
       <Menu/>
        <BannerMain 
+      
           videoTitle={dadosIniciais.categorias[0].videos[0].titulo}
           url={dadosIniciais.categorias[0].videos[0].url}
-          videoDescription={'O que é front-end? Trabalhando na área'}
+          videoDescription={ dadosIniciais.categorias[0].videos[0].titulo}
        />
        <Carousel
           ignoreFirstVideo
@@ -35,7 +40,7 @@ function Home() {
           category={dadosIniciais.categorias[4]}
        />
        <Footer/>
-    </div>
+    </AppWrapper>
   );
 }
 
