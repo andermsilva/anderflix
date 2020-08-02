@@ -33,6 +33,7 @@ function CadastroCategoria() {
   useEffect(() => {
     // console.log('alo brasil');
     const URL_TOP = 'http://localhost:8080/categorias';
+   // const URL_TOP = 'https://app-anderflix.herokuapp.com/categorias';
     fetch(URL_TOP).then(async (respostaDoServidor) => {
       const resposta = await respostaDoServidor.json();
       setCategorias([
