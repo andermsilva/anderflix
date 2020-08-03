@@ -1,11 +1,40 @@
+/* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable linebreak-style */
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
-import Button from '../../../components/Button';
+import '../stylesCategoria.css';
+import mario from '../../../assests/img/mario.png';
+import juliana from '../../../assests/img/juliana.png';
 
 function CadastroCategoria() {
+  const ButtonCadastro = styled.button`
+
+color: var(--white);
+border: 1px solid var(--white);
+box-sizing: border-box;
+cursor: pointer;
+padding: 16px 24px;
+background-color var(--primary);
+font-style:normal;
+font-weight: bold;
+font-size: 16px;
+outline: none;
+border-radius: 5px;
+text-decoration: none;
+display: inline-block;
+transition:opacity .3s;
+
+}
+
+&:hover,
+&:focus {
+opacity: .5;
+}
+
+`;
   // eslint-disable-next-line linebreak-style
   const valoresIniciais = {
     nome: '',
@@ -89,22 +118,40 @@ function CadastroCategoria() {
           />
 
         </div>
-
-        <Button>
-          Cadastrar
-        </Button>
+        <span className="centralizar">
+          <ButtonCadastro>
+            Cadastrar
+          </ButtonCadastro>
+        </span>
       </form>
 
       {categorias.length === 0 && (
       <div>
+        <img className="emoj" src={mario} />
         Loading...
+        <img className="emoj" src={juliana} />
       </div>
+
       )}
 
       <ul>
         {categorias.map((categoria) => (
-          <li key={`${categoria.nome}`}>
-            {categoria.nome}
+
+          <li className="lista" key={`${categoria.id}`}>
+            <div className="nome">
+
+              {categoria.nome}
+            </div>
+            <div className="descr">
+
+              {categoria.descricao}
+            </div>
+            <div
+              className="cor"
+              style={{ backgroundColor: categoria.cor, color: categoria.cor }}
+            >
+              c
+            </div>
           </li>
         ))}
       </ul>

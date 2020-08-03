@@ -1,4 +1,5 @@
-import styled from 'styled-components'
+/* eslint-disable linebreak-style */
+import styled from 'styled-components';
 
 const Button = styled.button`
 color: var(--white);
@@ -22,4 +23,4 @@ opacity: .5;
 }
 
 `;
-export default Button
+export default Button;
