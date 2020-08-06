@@ -1,63 +1,30 @@
+/* eslint-disable linebreak-style */
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable linebreak-style */
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import { Link, useHistory } from 'react-router-dom';
+import ButtonCadastro from '../ButtonCad';
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
 import '../stylesCategoria.css';
 import mario from '../../../assests/img/mario.png';
 import juliana from '../../../assests/img/juliana.png';
+import useForm from '../../../hooks/useForm';
+import categoriasRepository from '../../../repositories/categorias';
 
 function CadastroCategoria() {
-  const ButtonCadastro = styled.button`
+  const history = useHistory();
 
-color: var(--white);
-border: 1px solid var(--white);
-box-sizing: border-box;
-cursor: pointer;
-padding: 16px 24px;
-background-color var(--primary);
-font-style:normal;
-font-weight: bold;
-font-size: 16px;
-outline: none;
-border-radius: 5px;
-text-decoration: none;
-display: inline-block;
-transition:opacity .3s;
-
-}
-
-&:hover,
-&:focus {
-opacity: .5;
-}
-
-`;
   // eslint-disable-next-line linebreak-style
+
   const valoresIniciais = {
     nome: '',
     descricao: '',
     cor: '',
+    url: '',
   };
+  const { handleChange, values, clearForm } = useForm(valoresIniciais);
   const [categorias, setCategorias] = useState([]);
-
-  const [values, setValues] = useState(valoresIniciais);
-
-  function setValue(chave, valor) {
-    setValues({
-      ...values,
-      [chave]: valor,
-    });
-  }
-
-  function handleChange(info) {
-    setValue(
-      info.target.getAttribute('name'),
-      info.target.value,
-    );
-  }
 
   useEffect(() => {
     const URL_TOP = window.location.hostname.includes('localhost')
@@ -79,21 +46,46 @@ opacity: .5;
         {values.nome}
       </h1>
 
-      <form onSubmit={function handleSubmit(info) {
+      {/*    <form onSubmit={function handleSubmit(info) {
         info.preventDefault();
+
         setCategorias([
           ...categorias,
           values,
         ]);
-        setValues(valoresIniciais);
+
+        categoriasRepository(categorias).then(() => {
+          console.log('???');
+        });
+        clearForm();
       }}
+ */}
+      <form onSubmit={(event) => {
+        event.preventDefault();
+
+        categoriasRepository.create({
+          id: '',
+          titulo: values.titulo,
+          cor: values.cor,
+          link_extra: {
+            text: values.text,
+            url: values.url,
+          },
+
+        }).then(() => {
+          console.log('cadastro com sucesso');
+          history.push('/cadastro/video');
+          clearForm();
+        });
+      }}
+
       >
         <div>
           <FormField
             label="Nome da categoria"
             type="text"
-            name="nome"
-            value={values.nome}
+            name="titulo"
+            value={values.titulo}
             onChange={handleChange}
           />
         </div>
@@ -102,8 +94,18 @@ opacity: .5;
           <FormField
             label="Descrição"
             type="textarea"
-            name="descricao"
-            value={values.descricao}
+            name="text"
+            value={values.text}
+            onChange={handleChange}
+          />
+        </div>
+        <div>
+
+          <FormField
+            label="URL:"
+            type="text"
+            name="url"
+            value={values.url}
             onChange={handleChange}
           />
         </div>
@@ -118,11 +120,11 @@ opacity: .5;
           />
 
         </div>
-        <span className="centralizar">
+        <div className="centralizar">
           <ButtonCadastro>
             Cadastrar
           </ButtonCadastro>
-        </span>
+        </div>
       </form>
 
       {categorias.length === 0 && (
@@ -139,18 +141,22 @@ opacity: .5;
 
           <li className="lista" key={`${categoria.id}`}>
             <div className="nome">
-
-              {categoria.nome}
+              {categoria.titulo}
             </div>
+           
             <div className="descr">
-
-              {categoria.descricao}
+              {categoria.link_extra.text}
             </div>
+
+            <div className="url">
+              {categoria.link_extra.url}
+            </div>
+
             <div
               className="cor"
               style={{ backgroundColor: categoria.cor, color: categoria.cor }}
             >
-              c
+              1
             </div>
           </li>
         ))}

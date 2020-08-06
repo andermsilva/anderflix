@@ -1,3 +1,5 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable no-shadow */
 /* eslint-disable react/prop-types */
 /* eslint-disable linebreak-style */
 
@@ -73,13 +75,14 @@ const Input = styled.input`
 
 function FormField({
   // eslint-disable-next-line react/prop-types
-  label, type, name, value, onChange,
+  label, type, name, value, onChange, suggestions,
 
 }) {
   const fieldId = `id_${name}`;
   const isTextarea = type === 'textarea';
   const tag = isTextarea ? 'textarea' : 'input';
   const hasValue = Boolean(value.length);
+  const hasSuggestion = Boolean(suggestions.length);
   return (
     <FormFieldWrapper>
       <Label htmlFor={fieldId}>
@@ -92,12 +95,30 @@ function FormField({
           value={value}
           hasValue={hasValue}
           onChange={onChange}
+          autoComplete={hasSuggestion ? 'off' : 'on'}
+          list={hasSuggestion ? `suggestionFor_${fieldId}` : undefined}
 
         />
         <Label.Text>
           {label}
           :
         </Label.Text>
+
+        {
+            hasSuggestion && (
+
+            <datalist id={`suggestionFor_${fieldId}`}>
+              {suggestions.map((suggestion) => (
+
+                <option value={suggestion} key={`suggestionFor_${fieldId}_otption${suggestion}`}>
+                  {suggestion}
+                </option>
+              ))}
+            </datalist>
+
+            )
+          }
+
       </Label>
     </FormFieldWrapper>
   );
@@ -106,6 +127,8 @@ FormField.defaultProps = {
   type: 'text',
   value: '',
   onChange: () => {},
+
+  suggestions: [],
 };
 
 FormField.prototype = {
@@ -114,6 +137,7 @@ FormField.prototype = {
   value: PropTypes.string,
   name: PropTypes.string.isRequired,
   onChange: PropTypes.func,
+  suggestions: PropTypes.arrayOf(PropTypes.string),
 
 };
 export default FormField;
