@@ -56,11 +56,11 @@
     },
     {
       "id": 7,
-      "titulo": "Music",
-      "cor": "#f93ef3",
+      "titulo": "Teste #3",
+      "cor": "#4e00c2",
       "link_extra": {
-        "text": "Voltado para tendência musical no Brasil e no mundo",
-        "url": "https://www.youtube.com/results?search_query=music"
+        "text": "Link do site sbre a categoria(W3schools)",
+        "url": "https://www.w3schools.com/js/"
       }
     }
   ],
@@ -211,33 +211,15 @@
     },
     {
       "id": 25,
-      "categoriaId": 4,
-      "titulo": "Quimera- híbridismo e genética entre espécies",
-      "url": "https://www.youtube.com/watch?v=j_XNsIUR16k"
+      "categoriaId": 6,
+      "titulo": "105 Curiosidades Que Precisei Checar Para Acreditar",
+      "url": "https://www.youtube.com/watch?v=XQdzHcjQusI"
     },
     {
       "id": 26,
-      "categoriaId": 4,
-      "titulo": "Curiosidade",
-      "url": "https://www.youtube.com/watch?v=L6JYZ93Bx_o"
-    },
-    {
-      "id": 27,
-      "categoriaId": 7,
-      "titulo": "Lady In Red - Chris DeBurgh - Guitar Cover",
-      "url": "https://www.youtube.com/watch?v=TShNiKYjxA4"
-    },
-    {
-      "id": 28,
-      "categoriaId": 7,
-      "titulo": "Best Songs of Roxette - Roxette Greatest Hits Full Album HD/HQ",
-      "url": "https://www.youtube.com/watch?v=Rqlv-b5UD0w"
-    },
-    {
-      "id": 29,
-      "categoriaId": 7,
-      "titulo": "BR 9+ Classical Gas [Mason Williams] | Tommy Emmanuel",
-      "url": "https://www.youtube.com/watch?v=S33tWZqXhnk"
+      "categoriaId": 6,
+      "titulo": "11 Fatos Chocantes Desconhecidos Sobre os Dinossauros",
+      "url": "https://www.youtube.com/watch?v=hWsMUJBK3-4"
     }
   ]
 }
