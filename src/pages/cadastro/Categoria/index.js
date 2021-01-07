@@ -11,6 +11,7 @@ import mario from '../../../assests/img/mario.png';
 import juliana from '../../../assests/img/juliana.png';
 import useForm from '../../../hooks/useForm';
 import categoriasRepository from '../../../repositories/categorias';
+import ShortName from '../../../utils/functions'
 
 function CadastroCategoria() {
   const history = useHistory();
@@ -141,22 +142,25 @@ function CadastroCategoria() {
 
           <li className="lista" key={`${categoria.id}`}>
             <div className="nome">
-              {categoria.titulo}
+              
+            
+                {ShortName(categoria.titulo,0,40)}
+            
             </div>
            
             <div className="descr">
-              {categoria.link_extra.text}
+              {ShortName(categoria.link_extra.text,0,40)}
             </div>
 
             <div className="url">
-              {categoria.link_extra.url}
+              {ShortName(categoria.link_extra.url,0,40)}
             </div>
 
             <div
               className="cor"
               style={{ backgroundColor: categoria.cor, color: categoria.cor }}
             >
-              1
+            
             </div>
           </li>
         ))}

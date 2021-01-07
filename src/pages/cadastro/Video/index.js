@@ -10,7 +10,7 @@ import categoriasRepository from '../../../repositories/categorias';
 import mario from '../../../assests/img/mario.png';
 import juliana from '../../../assests/img/juliana.png';
 import Lixeira from '../../../assests/img/lixeira.png';
-
+import ShortName from '../../../utils/functions.js'
 function validate(values) {
   const errors = {};
 
@@ -49,6 +49,8 @@ function CadastroVideo() {
       setVideos(videosFromServer);
     });
   }, []);
+
+  
  
   return (
     <PageDefault>
@@ -132,11 +134,11 @@ function CadastroVideo() {
 
           <li className="lista" key={`${video.id}`}>
             <div className="nome_video">
-              {video.titulo}
+              {ShortName(video.titulo,0,25)}
             </div>
 
             <div className="url_video">
-              {video.url}
+              {ShortName(video.url,0,50)}
             </div>
             {categorias.map((categoria) => (categoria.id === video.categoriaId
             && (
@@ -144,9 +146,7 @@ function CadastroVideo() {
               className="cor_video"
               style={{ backgroundColor: categoria.cor, color: categoria.cor }}
             >
-              <Link to={`/cadastro/video?id=${video.id}`}>
-                <img className="lixeira" src={Lixeira} />
-              </Link>
+                 
 
             </div>
             )
