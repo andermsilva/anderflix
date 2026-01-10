@@ -30,7 +30,7 @@ function Home() {
 
                 videoTitle={dadosIniciais[0].videos[0].titulo}
                 url={dadosIniciais[0].videos[0].url}
-                videoDescription="Testo so o destaque!"
+                videoDescription="Testo so o destaque!!"
               />
               <Carousel
                 ignoreFirstVideo
